@@ -1,0 +1,123 @@
+.reasons {
+    color: $whole-black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-bottom: 120px;
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        background-image: url(../../images/leaf-pattern.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        min-width: 191px;
+        min-height: 314px;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transform: translate(0, 50%);
+        background-image: url(../../images/razz.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        min-width: 161px;
+        min-height: 315px;
+    }
+}
+
+.reasons__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reasons__desc {
+    color: $grey;
+    text-align: center;
+    font-weight: 300;
+    font-size: 18px;
+    color: $grey;
+}
+
+.reasons__main-title {
+    font-weight: bold;
+    font-size: 48px;
+    text-transform: uppercase;
+    color: $dark;
+    text-align: center;
+    margin-bottom: 7px;
+}
+
+.reasons__sub-title {
+    font-weight: normal;
+    font-size: 18px;
+    color: $grey;
+    text-align: center;
+    max-width: 420px;
+    align-self: center;
+    margin-bottom: 57px;
+    letter-spacing: 0.3px;
+}
+
+.reasons__title {
+    font-weight: bold;
+    text-align: center;
+    font-size: 27px;
+    color: $whole-black;
+    text-align: center;
+    margin-bottom: 18px;
+
+    &:before {
+        content: "";
+        display: block;
+        background-color: #f2f5f4;
+        background-size: 50% 50%;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 50%;
+        width: 125px;
+        height: 125px;
+        margin-bottom: 28px;
+    }
+}
+
+.reasons__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    position: relative;
+    margin-right: 70px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &:first-child .reasons__title:before {
+        background-image: url(../../icons/1.svg);
+    }
+
+    &:nth-child(2) .reasons__title:before {
+        background-image: url(../../icons/3.svg);
+    }
+
+    &:nth-child(3) .reasons__title:before {
+        background-image: url(../../icons/2.svg);
+    }
+
+    &:not(:last-child):after{
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 20%;
+        transform: translate(120%, 0);
+        background-image: url(../../images/dots.png);
+        width: 67px;
+        height: 21px;
+    }
+}

@@ -1,0 +1,3 @@
+.promo:after {
+  content: ".";
+  background-image: url(../images/barries.png); }

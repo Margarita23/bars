@@ -1,0 +1,127 @@
+.reviews {
+    color: $dark;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:after {
+        content: "";
+        width: 139px;
+        height: 300px;
+        background-image: url(../../images/razz-review-bottom.png);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transform: translate(0, 50%);
+    }
+}
+
+.reviews__title {
+    font-size: 59px;
+    text-align: center;
+    padding-bottom: 28px;
+    position: relative;
+    z-index: 100;
+
+    &:after {
+        content: "";
+        width: 150px;
+        height: 86px;
+        background-image: url(../../images/barry-review-top.png);
+        position: absolute;
+        right: -7%;
+    }
+}
+
+.review {
+    background-color: $light-grey-first;
+    max-width: 940px;
+    position: relative;
+    display: flex;
+    padding: 50px 42px 33px;
+    margin-bottom: 24px;
+
+    &:before {
+        content: "";
+        width: 90px;
+        height: 90px;
+        background-color: $white;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -75%);
+    }
+}
+
+.review__image {
+    width: 254px;
+    height: 259px;
+}
+
+.review__info {
+    color: $grey;
+
+    &:after {
+        background-image: url(../../images/reviews/reviews-decor.png);
+        background-position: center;
+        background-size: cover;
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 0px;
+        width: 127px;
+        height: 167px;
+    }
+}
+
+.review__image-box {
+    padding-right: 19px;
+}
+
+.review__title {
+    color: $dark-grey;
+    padding-top: 11px;
+    padding-bottom: 22px;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.review__desc {
+    padding-bottom: 26px;
+    font-size: 18px;
+    width: 440px;
+    line-height: 22px;
+}
+
+.review__author {
+    font-weight: 500;
+}
+
+.reviews_list {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 65px;
+}
+
+.reviews_item {
+    margin-right: 9px;
+    display: inline-block;
+}
+
+.reviews_item:last-child {
+    margin-right: 0;
+}
+
+.previews {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    object-fit: none;
+}
+
+.previews:hover {
+    border: 5px solid $dark-green;
+}
