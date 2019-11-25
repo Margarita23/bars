@@ -2,13 +2,13 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    right: 0;
+    right: -4%;
     top: 50%;
     transform: translateY(-50%);
 }
 
 .side-bar__item {
-    margin-bottom: 5px;
+    margin-bottom: 7px;
     width: 16px;
     height: 16px;
     border: 1px solid transparent;
