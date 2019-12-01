@@ -13,7 +13,7 @@
         <div class="container">
           <header class="header promo__header">
             <div class="logo">
-              <image src="./images/logo.png" class="logo" alt="Логотип компании CHOCCO"></image>
+              <img src="./images/logo.png" class="logo__image" alt="Логотип компании CHOCCO">
             </div>
             <nav class="menu">
               <ul class="menu__list">
@@ -28,47 +28,41 @@
             </nav>
             <div class="phone">8 800 903 90 90</div>
           </header>
-        
-          <ul class="side-bar">
-            <li class="side-bar__item side-bar__item--active"><a href="#" class="side-bar__link" aria-label="Промо"></a></li>
-            <li class="side-bar__item"><a href="#" class="side-bar__link"></a></li>
-            <li class="side-bar__item"><a href="#" class="side-bar__link"></a></li>
-            <li class="side-bar__item"><a href="#" class="side-bar__link"></a></li>
-            <li class="side-bar__item"><a href="#" class="side-bar__link"></a></li>
-            <li class="side-bar__item"><a href="#" class="side-bar__link"></a></li>
-            <li class="side-bar__item"><a href="#" class="side-bar__link"></a></li>
-            <li class="side-bar__item"><a href="#" class="side-bar__link"></a></li>
-          </ul>
           <div class="content">
-            <h1 class="title">натуральные шоколадные батончики</h1>
-            <h3 class="sub-title">Наши батончики идеально подходят для тех, кто следит за своим здоровьем</h3>
-            <button class="btn-order">заказать</button>
-            <ul class="benefits">
-              <li class="benefits__item">
-                <div class="benefits__content benefits__content--nature">
-                  <image class="icon" src="./icons/5.svg"></image>
-                  <div class="text">100% натуральный продукт</div>
-                </div>
-              </li>
-              <li class="benefits__item">
-                  <div class="benefits__content benefits__content--delivery">
-                    <image class="icon" src="./icons/6.svg"></image>
-                    <div class="text">3-5 дней доставка по РФ</div>
+            <div class="content__text">
+              <h1 class="title">натуральные шоколадные батончики</h1>
+              <h3 class="sub-title">Наши батончики идеально подходят для тех, кто следит за своим здоровьем</h3>
+              <button class="btn-order">заказать</button>
+              <ul class="benefits">
+                <li class="benefits__item">
+                  <div class="benefits__content benefits__content--nature">
+                    <img class="icon" src="./icons/5.svg" alt="Иконка преимущества 100% натуральности">
+                    <div class="text">100% натуральный продукт</div>
                   </div>
-              </li>
-              <li class="benefits__item">
-                <div class="benefits__content benefits__content--healthy">
-                  <image class="icon" src="./icons/4.svg"></image>
-                  <div class="text">Не портит фигуру</div>
-                </div>
-              </li>
-            </ul>
+                </li>
+                <li class="benefits__item">
+                    <div class="benefits__content benefits__content--delivery">
+                      <img class="icon" src="./icons/6.svg" alt="Иконка доставки">
+                      <div class="text">3-5 дней доставка по РФ</div>
+                    </div>
+                </li>
+                <li class="benefits__item">
+                  <div class="benefits__content benefits__content--healthy">
+                    <img class="icon" src="./icons/4.svg" alt="Иконка преимущества 'не портит фигуру'">
+                    <div class="text">Не портит фигуру</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="content__image">
+              <img src="./images/bars.png" class="image" alt="Картинка приветственных батончиков">
+            </div>
           </div>
         </div>
       </section>
       <section class="reasons">
         <div class="container">
-          <h2 class="reasons__main-title">почему chocco?</h2>
+          <h2 class="subject subject--reasons">почему chocco?</h2>
           <h5 class="reasons__sub-title">В нашем мире все происходит очень быстро, поэтому мы делаем батончики, которые удобно взять с собой.</h5>
           <ul class="reasons__list">
             <li class="reasons__item">
@@ -86,12 +80,80 @@
           </ul>
         </div>
       </section>
-      <section class="reviews">
+      <section class="team">
         <div class="container">
-          <h2 class="reviews__title">отзывы</h2>
+          <h2 class="subject subject--team">команда</h2>
+          <ul class="team__list">
+            <li class="team__item">
+              <img src="./images/team/photo-1.png" alt="Аватарка" class="avatar">
+              <div class="name">Борис Федорович</div>
+              <div class="position">Повар</div>
+              <div class="desc">Готовлю крутые батончики</div>
+            </li>
+            <li class="team__item">
+              <img src="./images/team/photo-2.png" alt="Аватарка" class="avatar">
+              <div class="name">Алла Иванова</div>
+              <div class="position">Повар</div>
+              <div class="desc">Готовлю крутые батончики</div>
+            </li>
+            <li class="team__item">
+              <img src="./images/team/photo-4.png" alt="Аватарка" class="avatar">
+              <div class="name">Кирилл Матросов</div>
+              <div class="position">Оператор</div>
+              <div class="desc">С радостью поможет подобрать батончики и оформить заказ.</div>
+            </li>
+            <li class="team__item">
+              <img src="./images/team/photo-3.png" alt="Аватарка" class="avatar">
+              <div class="name">Мила Рыжкова</div>
+              <div class="position">Оператор</div>
+              <div class="desc">Помогу определиться с выбором батончика.</div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="recipes">
+        <div class="container">
+          <h2 class="subject subject--recipes">Меню</h2>
+          <ul class="recipes__list">
+            <li class="recipes__item">
+              <h3 class="recipes__title">Батончики с молоком</h3>
+              <div class="recipes__desc recipes__desc--active">
+                <button class="recipes__cancel-btn"></button>
+                Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. 
+                Так и вкуснее, и полезнее.<br>
+                Ну чего ещё хотеть от жизни? Батончик - он твой лучший друг и радует всех вокруг. 
+                Как классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но кто ещё будет спрашивать - никто.<br> 
+                Надо бы, кстати, бабулю поздравить с днём Победы.
+              </div>
+            </li>
+            <li class="recipes__item">
+              <h3 class="recipes__title">С мёдом и фруктами</h3>
+              <div class="recipes__desc">
+                <button class="recipes__cancel-btn"></button>
+                Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и полезнее.<br>
+                Ну чего ещё хотеть от жизни? Батончик - он твой лучший друг и радует всех вокруг. 
+                Как классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но кто ещё будет спрашивать - никто.<br>
+                Надо бы, кстати, бабулю поздравить с днём Победы.
+              </div>
+            </li>
+            <li class="recipes__item">
+              <h3 class="recipes__title">Дикие ягоды</h3>
+              <div class="recipes__desc">
+                <button class="recipes__cancel-btn"></button>
+                Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и полезнее.<br>
+                Ну чего ещё хотеть от жизни? Батончик - он твой лучший друг и радует всех вокруг. 
+                Как классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но кто ещё будет спрашивать - никто.<br>
+                Надо бы, кстати, бабулю поздравить с днём Победы.
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="reviews">
+          <h2 class="subject subject--reviews">отзывы</h2>
           <div class="review">
             <div class="review__image-box">
-              <image class="review__image" src="./images/reviews/review-photo-1.png"></image>
+              <img class="review__image" src="./images/reviews/review-photo-1.png" alt="Фото человека, который оставил отзыв">
             </div>
             <div class="review__info">
               <div class="review__title">Лучший перекус</div>
@@ -103,19 +165,28 @@
               </div>
             </div>
           </div>
-          <ul class="reviews_list">
-            <li class="reviews_item">
-              <image class="previews" src="./images/reviews/photo-1.png"></image>
+          <ul class="reviews__list">
+            <li class="reviews__item">
+              <img class="previews previews--active" src="./images/reviews/photo-1.png" alt="Фто аккаунта в отзыве">
             </li>
-            <li class="reviews_item">
-              <image class="previews" src="./images/reviews/photo-2.png"></image>
+            <li class="reviews__item">
+              <img class="previews" src="./images/reviews/photo-2.png" alt="Фто аккаунта в отзыве">
             </li>
-            <li class="reviews_item">
-              <image class="previews" src="./images/reviews/photo-3.png"></image>
+            <li class="reviews__item">
+              <img class="previews" src="./images/reviews/photo-3.png" alt="Фто аккаунта в отзыве">
             </li>
           </ul>
-        </div>
-      </section>
+    </section>
     </div>
+    <ul class="side-bar">
+      <li class="side-bar__item side-bar__item--active"><a href="#" class="side-bar__link" aria-label="Промо"></a></li>
+      <li class="side-bar__item"><a href="#" class="side-bar__link"></a></li>
+      <li class="side-bar__item"><a href="#" class="side-bar__link"></a></li>
+      <li class="side-bar__item"><a href="#" class="side-bar__link"></a></li>
+      <li class="side-bar__item"><a href="#" class="side-bar__link"></a></li>
+      <li class="side-bar__item"><a href="#" class="side-bar__link"></a></li>
+      <li class="side-bar__item"><a href="#" class="side-bar__link"></a></li>
+      <li class="side-bar__item"><a href="#" class="side-bar__link"></a></li>
+    </ul>
   </body>
 </html>

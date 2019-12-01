@@ -44,13 +44,9 @@
     color: $grey;
 }
 
-.reasons__main-title {
+.subject.subject--reasons {
     font-weight: bold;
-    font-size: 48px;
-    text-transform: uppercase;
-    color: $dark;
-    text-align: center;
-    margin-bottom: 7px;
+    margin: 23px 0px 10px 0px;
 }
 
 .reasons__sub-title {
@@ -60,7 +56,7 @@
     text-align: center;
     max-width: 420px;
     align-self: center;
-    margin-bottom: 57px;
+    margin-bottom: 55px;
     letter-spacing: 0.3px;
 }
 

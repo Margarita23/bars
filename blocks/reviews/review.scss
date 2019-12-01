@@ -3,6 +3,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    margin-top: 33px;
+
+    &:before {
+        content: "";
+        width: 150px;
+        height: 86px;
+        background-image: url(../../images/barry-review-top.png);
+        position: absolute;
+        right: 12%;
+        top: 0;
+    }
 
     &:after {
         content: "";
@@ -16,30 +28,18 @@
     }
 }
 
-.reviews__title {
-    font-size: 59px;
-    font-weight: 500;
-    text-align: center;
-    padding-bottom: 28px;
-    position: relative;
-    z-index: 100;
-
-    &:after {
-        content: "";
-        width: 150px;
-        height: 86px;
-        background-image: url(../../images/barry-review-top.png);
-        position: absolute;
-        right: -7%;
-    }
+.subject--reviews {
+    margin-bottom: 33px;
+    z-index: 10;
 }
 
 .review {
     background-color: $light-grey-first;
-    max-width: 940px;
+    width: 940px;
     position: relative;
     display: flex;
-    padding: 50px 42px 33px;
+    align-content: center;
+    padding: 50px 0px 30px;
     margin-bottom: 24px;
 
     &:before {
@@ -58,6 +58,7 @@
 .review__image {
     width: 254px;
     height: 259px;
+    padding-left: 47px;
 }
 
 .review__info {
@@ -90,9 +91,9 @@
 }
 
 .review__desc {
-    padding-bottom: 26px;
+    margin-bottom: 26px;
     font-size: 18px;
-    width: 440px;
+    max-width: 440px;
     line-height: 22px;
 }
 
@@ -100,30 +101,30 @@
     font-weight: 500;
 }
 
-.reviews_list {
+.reviews__list {
     display: flex;
     justify-content: center;
     padding-bottom: 65px;
 }
 
-.reviews_item {
+.reviews__item {
     margin-right: 9px;
     display: inline-block;
 }
 
-.reviews_item:last-child {
+.reviews__item:last-child {
     margin-right: 0;
 }
 
 .previews {
-    width: 68px;
-    height: 68px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
-    box-sizing: border-box;
     object-fit: none;
     cursor: pointer;
+    box-sizing: border-box;
 }
 
-.previews:hover {
+.previews--active {
     border: 5px solid $dark-green;
 }

@@ -1,0 +1,59 @@
+.team .container {
+    width: 1000px;
+}
+
+.team__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.subject--team {
+    margin-bottom: 50px;
+}
+
+.avatar {
+    display: block;
+    height: 288px;
+    object-fit: cover;
+    margin-bottom: 23px;
+}
+
+.team__item {
+    display: flex;
+    flex-direction: column;
+    color: $black;
+    text-align: center;
+    flex: 1;
+    max-width: 220px;
+}
+
+.name {
+    font-size: 21px;
+    color: $dark-grey;
+    font-weight: 500;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.position {
+    font-size: 18px;
+    color: $light-black;
+    font-weight: 400;
+}
+
+.desc {
+    font-size: 18px;
+    color: $grey;
+    font-weight: 300;
+    text-align: center;
+}
+
+.name:after {
+    content: "";
+    display: inline-block;
+    margin-left: 10px;
+    border-top: 5px solid $dark-green;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid transparent;
+}

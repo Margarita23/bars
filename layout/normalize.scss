@@ -61,7 +61,7 @@
    */
   
   pre {
-    font-family: 'AlegreyaSans', monospace, monospace; /* 1 */
+    font-family: $font-stack, monospace, monospace; /* 1 */
     font-size: 1em; /* 2 */
   }
   
@@ -104,7 +104,7 @@
   code,
   kbd,
   samp {
-    font-family: 'AlegreyaSans', monospace, monospace; /* 1 */
+    font-family: $font-stack, monospace, monospace; /* 1 */
     font-size: 1em; /* 2 */
   }
   

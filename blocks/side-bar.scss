@@ -1,9 +1,9 @@
 .side-bar {
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
-    right: -4%;
-    top: 50%;
+    right: 13%;
+    top: 85%;
     transform: translateY(-50%);
 }
 

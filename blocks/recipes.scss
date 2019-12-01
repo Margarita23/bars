@@ -1,0 +1,99 @@
+.recipes {
+    position: relative;
+}
+
+.recipes .container {
+    background-image: url(../images/menu-back.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1100px;
+    justify-content: space-between;
+    backdrop-filter: blur(2px);
+    backdrop-filter: brightness(0%);
+
+    &:before {
+        width: 105px;
+        height: 113px;
+        display: block;
+        content: "";
+        position: absolute;
+        top: -10%;
+        left: 3%;
+        z-index: 20;
+        background-image: url(../images/one-razz.png);
+    }
+}
+
+.subject.subject--recipes {
+    color: $white;
+    padding-top: 87px;
+    padding-left: 77px;
+}
+
+.recipes__list {
+    display: flex;
+}
+
+.recipes__item {
+    cursor: pointer;
+    display: flex;
+    backdrop-filter: brightness(0%);
+    background-position: center;
+    background-size: cover;
+}
+
+.recipes__item:first-child {
+    background-image: url(../images/kokos.png);
+}
+
+.recipes__item:nth-child(2) {
+    background-image: url(../images/granola.png);
+}
+
+.recipes__item:nth-child(3) {
+    background-image: url(../images/shutter.png);
+}
+
+.recipes__title {
+    color: $white;
+    transform: rotate(-180deg);
+    writing-mode: vertical-rl;
+    padding: 40px 0px;
+    font-size: 48px;
+    font-weight: 500;
+    min-width: 100px;
+}
+
+.recipes__desc {
+    display: none;
+}
+
+.recipes__desc.recipes__desc--active {
+    display: inline-block;
+    max-width: 390px;
+    background-color: rgba(50, 50, 50, 0.9); 
+    padding: 46px 104px 10px 16px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.recipes__cancel-btn {
+    position: absolute;
+    padding: 0px;
+    width: 24px;
+    height: 24px;
+    border-radius: 14px;
+    background-color: transparent;
+    border: none;
+    border-radius: none;
+    background-image: url(../images/cancel.png);
+    background-position: center;
+    background-size: cover;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 100%);
+}

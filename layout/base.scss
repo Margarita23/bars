@@ -1,12 +1,14 @@
 body {
-  font: 100% $font-stack;
+  font-family: $font-stack;
   color: $white;
   font-size: 18px;
-  color: rgba(255, 255, 255, 255);
   cursor: default;
+  font-weight: normal;
+  font-style: normal;
+  box-sizing: border-box;
 }
 
-* {
+h1, h2, h3, h4, h5, h6 {
   margin: 0px;
   padding: 0px;
 }
