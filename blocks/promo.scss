@@ -22,7 +22,8 @@
 }
 
 .title {
-    min-width: 350px;
+    // min-width: 350px;
+    min-width: rem(350);
     font-size: 59px;
     line-height: 62px;
     letter-spacing: 0.42px;

@@ -1,0 +1,13 @@
+@function rem($pxsize) {
+    @return ($pxsize/16)+rem;
+}
+
+// @mixin remy ($pxsize) {
+//     font-size: ($pxsize/16)+rem;
+// }
+
+// @media all and (min-width: 900px) {
+//     .my-example {
+//     width: 84%;
+//     }
+// }
