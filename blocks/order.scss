@@ -1,0 +1,229 @@
+.order {
+    background-image: url(../images/pattern.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.order h2 {
+    padding-top: 75px;
+    font-size: 48px;
+    color: #0f5a47;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 46px;
+}
+
+.order__form {
+    display: flex;
+    width: 100%;
+    min-width: 940px;
+}
+
+.form__column {
+    display: flex;
+    width: 100%;
+    padding-right: 20px;
+    flex-direction: column;
+
+    &:last-child {
+        padding-right: 0px;
+    }
+}
+
+.form__row {
+    margin-bottom: 17px;
+    display: flex;
+    align-items: center;
+}
+
+.form__block {
+    padding-right: 20px;
+    flex: 1;
+}
+
+.form__block:last-child {
+    padding-right: 0px;
+}
+
+.form__block-title {
+    color: #0f5a47;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 1px;
+}
+
+.form__input {
+    width: 100%;
+    background: #fff;
+    font-size: 22px;
+    font-weight: 300;
+    border-radius: 3px;
+    padding: 18px 10px;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+}
+
+.form__input:placeholder {
+    color: rgba(34, 31, 31, 0.502);
+    
+}
+
+.form__input:focus {
+    border-color: #f89513;
+}
+
+.form__input--textarea {
+    width: 100%;
+    min-height: 180px;
+    background: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    border-radius: 3px;
+    padding: 11px 9px;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+}
+
+.form__radios {
+    font-weight: lighter;
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    padding-top: 6px;
+}
+
+.form__radios label {
+    display: flex;
+}
+
+.form__button {
+    margin-left: auto;
+    padding: 15px 20px;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: rgb(28, 31, 29);
+    border-radius: 3px;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+}
+
+.form__radio--checked {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form__quastion-photo:checked~.form__radio--empty .form__radio--checked {
+    width: 14px;
+    height: 14px;
+    background-color: $dark-green;
+}
+
+.form__quastion-photo {
+    display: none;
+}
+
+.form__radio--empty {
+    position: relative;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 1px solid #c9c9c9;
+    background-color: #ffffff;
+    background-image: linear-gradient(to top, #ededed 0%, #ffffff 100%);
+    margin-right: 8px;
+    box-sizing: border-box;
+}
+
+.radio__text {
+    margin-right: 20px;
+    font-size: 18px;
+    line-height: 30px;
+    color: $dark-green;
+    font-weight: 400;
+}
+
+.checkbox__text {
+    margin-right: 20px;
+    font-size: 18px;
+    line-height: 30px;
+    color: $dark-green;
+    font-weight: 400;
+}
+
+.form__checkbox--empty {
+    width: 26px;
+    height: 26px;
+    border: 1px solid #c9c9c9;
+    background-color: #ffffff;
+    background-image: linear-gradient(to top, #ededed 0%, #ffffff 100%);
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form__quastion-call:checked~.form__checkbox--empty {
+    border: none;
+}
+
+.form__quastion-call:checked~.form__checkbox--empty .form__checkbox--checked {
+    width: 11px;
+    height: 9px;
+    background-image: url(../images/check.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.form__quastion-call {
+    display: none;
+}
+
+.form__checking label{
+    display: flex;
+    flex-direction: row;
+}
+
+.form__row .form__checking {
+    margin-top: -13px;
+}
+
+.form__row--last {
+    align-self: flex-start;
+    margin-top: 20px;
+}
+
+.form__button {
+    padding: 18px 31px;
+    font-size: 19px;
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+    text-transform: uppercase;
+    background-color: $dark-green;
+    border-radius: 30px;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+}
+
+.form__button:hover {
+    background: $white;
+    color: $dark-green;
+    border-bottom: 2px solid $dark-green;
+}
+
+.form__button--cancel {
+    display: flex;
+    align-content: center;
+    color: $dark-green;
+    background-color: transparent;
+    border: none;
+}

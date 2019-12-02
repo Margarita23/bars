@@ -14,6 +14,9 @@
 
 @import './blocks/team/team.scss';
 @import './blocks/recipes.scss';
+@import './blocks/order.scss';
+@import './blocks/map.scss';
+@import './blocks/footer.scss';
 
 .wrapper {
     position: relative;
@@ -28,6 +31,7 @@ section {
 
 .container {
     max-width: 940px;
+    min-width: 800px;
     position: relative;
     display: flex;
     flex-direction: column;

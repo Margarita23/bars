@@ -26,7 +26,7 @@
                 <li class="menu__item">Контакты</li>
               </ul>
             </nav>
-            <div class="phone">8 800 903 90 90</div>
+            <div class="phone"><img src="../images/phone-white.png" class="phone-icon">8 800 903 90 90</div>
           </header>
           <div class="content">
             <div class="content__text">
@@ -177,6 +177,125 @@
             </li>
           </ul>
     </section>
+    <section class="order">
+      <div class="container">
+        <h2 class="subject subject--order">закажите доставку</h2>
+        <form class="order__form">
+          <div class="form__column">
+            <div class="form__row">
+              <label class="form__block">
+                <div class="form__block-title">Имя</div>
+                <input type="text" class="form__input">
+              </label>
+              <label class="form__block">
+                <div class="form__block-title">Телефон</div>
+                <input type="text" class="form__input" value="89022348912">
+              </label>
+            </div>
+              <div class="form__row">
+                <label class="form__block">
+                  <div class="form__block-title">Улица</div>
+                  <input type="text" class="form__input">
+                </label>
+              </div>
+              <div class="form__row">
+                <label class="form__block">
+                  <div class="form__block-title">Дом</div>
+                  <input type="text" class="form__input">
+                </label>
+        
+                <label class="form__block">
+                  <div class="form__block-title">Корпус</div>
+                  <input type="text" class="form__input">
+                </label>
+        
+                <label class="form__block">
+                  <div class="form__block-title">Квартира</div>
+                  <input type="text" class="form__input">
+                </label>
+                   
+                <label class="form__block">
+                  <div class="form__block-title">Этаж</div>
+                  <input type="text" class="form__input">
+                </label>
+              </div>
+          </div>
+          <div class="form__column">
+            <div class="form__row">
+              <label class="form__block">
+                <div class="form__block-title">Комментарий</div>
+                <input type="text" class="form__input--textarea">
+              </label>
+            </div>
+            <div class="form__row">
+              <div class="form__radios">
+                <label for="pay-no-change">
+                  <input type="radio" name="pay" class="form__quastion-photo" id="pay-no-change" checked>
+                  <div class="form__radio--empty">
+                    <div class="form__radio--checked"></div>
+                  </div>
+                  <div class="radio__text">
+                    Потребуется сдача
+                  </div>
+                </label>
+                <label for="pay-cart">
+                  <input type="radio" name="pay" class="form__quastion-photo" id="pay-cart">
+                  <div class="form__radio--empty">
+                    <div class="form__radio--checked"></div>
+                  </div>
+                  <div class="radio__text">
+                    Оплата по карте
+                  </div>
+                </label>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form__checking">
+                <label for="checkbox__label">
+                  <input type="checkbox" name="call" class="form__quastion-call" id="isCall">
+                  <div class="form__checkbox--empty">
+                    <div class="form__checkbox--checked"></div>
+                  </div>
+                  <div class="checkbox__text">Не перезванивать</div>
+                </label>
+              </div>
+            </div>
+
+            <div class="form__row form__row--last">
+              <button name="order-btn" type="submit" class="form__button">Заказать</button>
+              <button name="order-btn" type="reset" class="form__button--cancel">Очистить</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="guide">
+      <div class="map"></div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="contacts">
+          <div class="adress">Москва, ул.Новый Арбат, д.31/12</div>
+          <div class="phone"><img src="../images/phone-green.png" class="phone-icon" alt="Иконка трубки телефона">8 800 903 90 90</div>
+        </div>
+        <div class="social-net">
+          <ul class="social-net__list">
+            <li class="social-net__item social-net__item--vk">
+              <img src="../icons/vk.svg" alt="Иконка соц. сетей вк">
+            </li>
+            <li class="social-net__item social-net__item--fb">
+              <img src="../icons/f.svg" alt="Иконка соц. сетей фейсбука">
+            </li>
+            <li class="social-net__item social-net__item--in">
+              <img src="../icons/in.svg" alt="Иконка соц. сетей инстаграма">
+            </li>
+            <li class="social-net__item social-net__item--tw">
+              <img src="../icons/tv.svg" alt="Иконка соц. сетей твиттера">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
     </div>
     <ul class="side-bar">
       <li class="side-bar__item side-bar__item--active"><a href="#" class="side-bar__link" aria-label="Промо"></a></li>

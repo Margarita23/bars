@@ -1,0 +1,62 @@
+.footer {
+    margin-bottom: 22px;
+    font-size: 21px;
+    font-weight: 400;
+    & .container {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+}
+
+.adress {
+    color: $black;
+    margin-bottom: 3px;
+}
+
+.footer .phone {
+    color: #0f5a47;
+    margin-left: 17px;
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.social-net {
+    display: flex;
+    align-items: center; 
+}
+
+.social-net__list {
+    display: flex;
+}
+
+.social-net__item {
+    background-position: center;
+    background-size: cover;
+    margin-right: 20px;
+    height: 100%;
+}
+
+.social-net__item:last-child {
+    margin-right: 0px;
+}
+
+.social-net__item--vk {
+    width: 23px;
+    height: 13px;
+}
+
+.social-net__item--fb {
+    width: 20px;
+    height: 20px;
+}
+
+.social-net__item--in {
+    width: 20px;
+    height: 20px;    
+}
+
+.social-net__item--tw {
+    width: 20px;
+    height: 16px;
+}

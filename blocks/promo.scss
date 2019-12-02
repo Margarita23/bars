@@ -5,6 +5,7 @@
     background-color: $blue;
     background-size: contain;
     position: relative;
+    min-width: 1100px;
 }
 
 .promo:after {
@@ -21,7 +22,7 @@
 }
 
 .title {
-    width: 404px;
+    min-width: 350px;
     font-size: 59px;
     line-height: 62px;
     letter-spacing: 0.42px;
@@ -40,6 +41,7 @@
 .content {
     display: flex;
     padding-bottom: 22px;
+    justify-content: space-between;
 }
 
 .content__text {
@@ -48,10 +50,6 @@
 }
 
 .content__image {
-    background-position: right;
-}
-
-.content__image .image {
     margin-right: -55px;
 }
 
