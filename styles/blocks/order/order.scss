@@ -1,13 +1,11 @@
 .order {
-    background-image: url(../images/pattern.png);
+    background-image: url(../assets/images/pattern.png);
     background-position: center;
     background-size: cover;
     position: relative;
-    min-width: 1100px;
 }
 
 .order h2 {
-    padding-top: 75px;
     font-size: 48px;
     color: #0f5a47;
     font-weight: 700;
@@ -18,17 +16,18 @@
 .order__form {
     display: flex;
     width: 100%;
-    min-width: 940px;
+    // width: 95%;
+    // margin: 0 auto;
 }
 
 .form__column {
     display: flex;
     width: 100%;
-    padding-right: 20px;
+    margin-right: 20px;
     flex-direction: column;
 
     &:last-child {
-        padding-right: 0px;
+        margin-right: 0px;
     }
 }
 
@@ -39,35 +38,34 @@
 }
 
 .form__block {
-    padding-right: 20px;
+    margin-right: 20px;
     flex: 1;
 }
 
 .form__block:last-child {
-    padding-right: 0px;
+    margin-right: 0px;
 }
 
 .form__block-title {
     color: #0f5a47;
     font-size: 18px;
     font-weight: 400;
-    margin-bottom: 1px;
+    margin-bottom: 6px;
 }
 
 .form__input {
     width: 100%;
     background: #fff;
-    font-size: 22px;
-    font-weight: 300;
-    border-radius: 3px;
-    padding: 18px 10px;
+    font-size: 20px;
+    font-weight: 100;
+    padding: 17px 12px;
     box-sizing: border-box;
     border: 1px solid transparent;
+    font-family: "OpenSans", "Arial";
 }
 
 .form__input:placeholder {
     color: rgba(34, 31, 31, 0.502);
-    
 }
 
 .form__input:focus {
@@ -134,13 +132,13 @@
 
 .form__radio--empty {
     position: relative;
-    width: 26px;
-    height: 26px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     border: 1px solid #c9c9c9;
     background-color: #ffffff;
     background-image: linear-gradient(to top, #ededed 0%, #ffffff 100%);
-    margin-right: 8px;
+    margin-right: 12px;
     box-sizing: border-box;
 }
 
@@ -179,7 +177,7 @@
 .form__quastion-call:checked~.form__checkbox--empty .form__checkbox--checked {
     width: 11px;
     height: 9px;
-    background-image: url(../images/check.png);
+    background-image: url(../assets/images/check.png);
     background-position: center;
     background-size: cover;
 }

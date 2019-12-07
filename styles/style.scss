@@ -1,0 +1,21 @@
+@import 'layout/mixins.scss';
+
+@import 'layout/fonts.scss';
+@import 'layout/variables.scss';
+@import 'layout/normalize.scss';
+@import 'layout/base.scss';
+
+@import 'blocks/header/header.scss';
+@import 'blocks/header/menu.scss';
+@import 'blocks/promo/benefits.scss';
+@import 'blocks/promo/promo.scss';
+
+@import 'blocks/reasons/reasons.scss';
+@import 'blocks/reviews/review.scss';
+@import 'blocks/side-bar.scss';
+
+@import 'blocks/team/team.scss';
+@import 'blocks/recipes/recipes.scss';
+@import 'blocks/order/order.scss';
+@import 'blocks/map/map.scss';
+@import 'blocks/footer/footer.scss';

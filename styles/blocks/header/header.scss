@@ -1,20 +1,24 @@
 .header {
     display: flex;
     justify-content: space-between;
-    padding-top: 24px;
+    padding-top: 10px;
     align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
 .logo {
     width: 53px;
     height: 38px;
-    margin-right: 44px;
+    margin-right: 47px;
 }
 
 .phone {
-    // font-size: 24px;
-    font-size: rem(24);
+    // font-size: rem(24px);
+    letter-spacing: 1.5px;
     position: relative;
+    font-family: "OpenSans", "Arial";
 }
 
 .phone-icon {
