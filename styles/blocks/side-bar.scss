@@ -8,10 +8,10 @@
 }
 
 .side-bar__item {
-    margin-bottom: 7px;
-    width: 16px;
-    height: 16px;
-    border: 1px solid transparent;
+    margin-bottom: rem(7px);
+    width: rem(16px);
+    height: rem(16px);
+    border: rem(1px) solid transparent;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -19,12 +19,12 @@
 }
 
 .side-bar__item:last-child {
-    margin-bottom: 0px;
+    margin-bottom: rem(0px);
 }
 
 .side-bar__link {
-    width: 6px;
-    height: 6px;
+    width: rem(6px);
+    height: rem(6px);
     background-color: $white;
     border-radius: 50%;
 }

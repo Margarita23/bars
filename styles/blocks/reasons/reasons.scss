@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    background-color: rgb(147, 212, 147);
+    border-bottom: #000 solid 3px;
 
     &:before {
         content: "";
@@ -12,8 +12,8 @@
         background-image: url(../assets/images/leaf-pattern.png);
         background-repeat: no-repeat;
         background-position: center;
-        min-width: 191px;
-        min-height: 314px;
+        // min-width: rem(191px);
+        // min-height: rem(314px);
     }
 
     &:after {
@@ -25,50 +25,60 @@
         background-image: url(../assets/images/razz.png);
         background-repeat: no-repeat;
         background-position: center;
-        min-width: 161px;
-        min-height: 315px;
+        // background-size: contain;
+        // min-width: rem(161px);
+        // min-height: rem(315px);
     }
 
     & .container {
-        padding-top: 14px;
+        padding-top: rem(14px);
     }
 }
 
 .reasons__list {
     display: flex;
     justify-content: space-between;
+    
+    @include tablets {
+        flex-direction: column;
+        width: rem(500px);
+        margin: 0 auto;
+    }
 }
 
 .reasons__desc {
     color: $grey;
     text-align: center;
     font-weight: 300;
-    font-size: 18px;
-    color: $grey;
+    font-size: rem(18px);
+
+    @include tablets {
+        margin-bottom: 26px;
+    }
 }
 
 .subject.subject--reasons {
     font-weight: bold;
-    margin-bottom: 7px;
+    margin-bottom: rem(7px);
 }
 
 .reasons__sub-title {
     font-weight: normal;
-    font-size: 18px;
+    font-size: rem(18px);
     color: $grey;
     text-align: center;
-    max-width: 420px;
+    max-width: rem(420px);
     align-self: center;
-    margin-bottom: 55px;
+    margin-bottom: rem(55px);
 }
 
 .reasons__title {
     font-weight: bold;
     text-align: center;
-    font-size: 27px;
+    font-size: rem(27px);
     color: $whole-black;
     text-align: center;
-    margin-bottom: 18px;
+    margin-bottom: rem(18px);
 
     &:before {
         content: "";
@@ -78,9 +88,9 @@
         background-repeat: no-repeat;
         background-position: center;
         border-radius: 50%;
-        width: 125px;
-        height: 125px;
-        margin-bottom: 28px;
+        width: rem(125px);
+        height: rem(125px);
+        margin-bottom: rem(28px);
     }
 }
 
@@ -90,7 +100,7 @@
     align-items: center;
     flex: 1;
     position: relative;
-    margin-right: 70px;
+    margin-right: rem(70px);
 
     &:last-child {
         margin-right: 0;
@@ -115,7 +125,17 @@
         top: 20%;
         transform: translate(120%, 0);
         background-image: url(../assets/images/dots.png);
-        width: 67px;
-        height: 21px;
+        width: rem(67px);
+        height: rem(21px);
+        background-position: center;
+        background-size: contain;
+
+        @include tablets {
+            display: none;
+        }
+    }
+
+    @include tablets {
+        margin-right: 0;
     }
 }

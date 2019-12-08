@@ -3,34 +3,50 @@
 }
 
 .section {
-  width: 100%;
   height: 100vh;
-  min-height: 650px;
+  min-height: rem(650px);
   display: flex;
   justify-content: center;
+  // overflow-x: hidden;
+  // overflow-x: visible;
+  // overflow-y: hidden;
+
+  @include tablets {
+    height: 1000px;
+  }
 }
 
 .container {
   width: 95%;
-  max-width: 940px;
+  max-width: rem(940px);
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @include tablets {
+    flex-direction: column;
+    width: rem(500px);
+  }
 }
 
 .subject {
-  font-size: 48px;
+  font-size: rem(48px);
   font-weight: 500;
   text-align: center;
   text-transform: uppercase;
   color: $dark;
+
+  @include tablets {
+    font-size: rem(59px);
+    font-weight: 600;
+}
 }
 
 .body {
   font-family: $font-stack;
   color: $white;
-  font-size: 18px;
+  font-size: rem(18px);
   cursor: default;
   font-weight: normal;
   font-style: normal;
@@ -38,19 +54,19 @@
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0px;
-  padding: 0px;
+  margin: rem(0px);
+  padding: rem(0px);
 }
 
 ul {
   list-style-type: disc;
-  margin-block-start: 0px;
-  margin-block-end: 0px;
-  padding: 0px;
+  margin-block-start: rem(0px);
+  margin-block-end: rem(0px);
+  padding: rem(0px);
 }
 
 li {
-    padding: 0px;
-    margin: 0px;
+    padding: rem(0px);
+    margin: rem(0px);
     list-style: none;
 }

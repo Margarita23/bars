@@ -1,15 +1,16 @@
 .reviews {
-    color: $dark;
     flex-direction: column;
     align-items: center;
     position: relative;
-    background-color: rgb(212, 200, 147);
+    border-bottom: #000 solid 3px;
 
     &:before {
         content: "";
-        width: 150px;
-        height: 86px;
+        width: rem(150px);
+        height: rem(86px);
         background-image: url(../assets/images/barry-review-top.png);
+        background-size: contain;
+        background-repeat: no-repeat;
         position: absolute;
         right: 12%;
         top: 0;
@@ -17,9 +18,11 @@
 
     &:after {
         content: "";
-        width: 139px;
-        height: 300px;
+        width: rem(139px);
+        height: rem(300px);
         background-image: url(../assets/images/razz-review-bottom.png);
+        background-repeat: no-repeat;
+        background-size: contain;
         position: absolute;
         left: 0;
         bottom: 0;
@@ -34,38 +37,48 @@
 
 .review {
     background-color: $light-grey-first;
-    width: 940px;
+    // width: 100%;
+    width: rem(940px);
+    // width: 60%;
     position: relative;
     display: flex;
     align-content: center;
-    padding-top: 50px;
-    padding-bottom: 35px;
-    margin-top: 30px;
-    margin-bottom: 23px;
+    padding-top: rem(50px);
+    padding-bottom: rem(35px);
+    margin-top: rem(30px);
+    margin-bottom: rem(23px);
+
+    @include tablets {
+        width: rem(500px);
+        flex-direction: column;
+        align-items: center;
+    }
 
     &:before {
         content: "";
-        width: 90px;
-        height: 90px;
+        width: rem(90px);
+        height: rem(90px);
         background-color: $white;
         border-radius: 50%;
         position: absolute;
         top: 0;
         left: 50%;
         transform: translate(-50%, -75%);
-    }
+    } 
 }
 
 .review__image {
-    width: 254px;
-    height: 259px;
-    padding-left: 47px;
+    width: rem(254px);
+    height: rem(259px);
+    padding-left: rem(47px);
+    position: relative;
+    z-index: 2;
 }
 
 .review__info {
     color: $grey;
 
-    &:after {
+    &:before {
         background-image: url(../assets/images/reviews/reviews-decor.png);
         background-position: center;
         background-size: cover;
@@ -73,29 +86,38 @@
         display: inline-block;
         position: absolute;
         top: 0;
-        right: 0px;
-        width: 127px;
-        height: 167px;
+        right: rem(0px);
+        width: rem(127px);
+        height: rem(167px);
+    }
+
+    @include tablets {
+        text-align: center;
+        align-items: center;
     }
 }
 
 .review__image-box {
-    padding-right: 15px;
+    padding-right: rem(15px);
 }
 
 .review__title {
     color: $dark-grey;
-    padding-top: 15px;
-    padding-bottom: 22px;
-    font-size: 30px;
+    padding-top: rem(15px);
+    padding-bottom: rem(22px);
+    font-size: rem(30px);
     font-weight: 500;
+    z-index: 2;
+    position: relative;
 }
 
 .review__desc {
-    margin-bottom: 28px;
-    font-size: 18px;
-    max-width: 440px;
-    line-height: 22px;
+    margin-bottom: rem(28px);
+    font-size: rem(18px);
+    max-width: rem(440px);
+    line-height: rem(22px);
+    z-index: 2;
+    position: relative;
 }
 
 .review__author {
@@ -108,7 +130,7 @@
 }
 
 .reviews__item {
-    margin-right: 9px;
+    margin-right: rem(9px);
     display: inline-block;
 }
 
@@ -117,14 +139,18 @@
 }
 
 .previews {
-    width: 70px;
-    height: 70px;
+    width: rem(70px);
+    height: rem(70px);
     border-radius: 50%;
-    object-fit: none;
     cursor: pointer;
     box-sizing: border-box;
+
+    @include tablets {
+        width: rem(84px);
+        height: rem(84px);
+    }
 }
 
 .previews--active {
-    border: 5px solid $dark-green;
+    border: rem(5px) solid $dark-green;
 }

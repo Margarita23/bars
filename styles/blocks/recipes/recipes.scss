@@ -1,14 +1,15 @@
 .recipes {
     position: relative;
     background-image: url(../assets/images/menu-back.png);
+    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     backdrop-filter: brightness(0%);
     justify-content: space-between;
 
     &:before {
-        width: 105px;
-        height: 113px;
+        width: rem(105px);
+        height: rem(113px);
         display: block;
         content: "";
         position: absolute;
@@ -16,17 +17,29 @@
         left: 9%;
         z-index: 1;
         background-image: url(../assets/images/one-razz.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @include tablets {
+            top: -6%;
+        }
     }
 }
 
 .subject.subject--recipes {
     color: $white;
-    padding-left: 161px;
-    padding-top: 86px;
+    padding-left: rem(161px);
+    padding-top: rem(86px);
+
+    @include tablets {
+        padding-left: rem(40px);
+        padding-right: rem(20px);
+    }
 }
 
 .recipes__list {
     display: flex;
+
 }
 
 .recipes__item {
@@ -53,11 +66,11 @@
     color: $white;
     transform: rotate(-180deg);
     writing-mode: vertical-rl;
-    padding: 40px 0px;
-    font-size: 48px;
+    padding: rem(40px) rem(0px);
+    font-size: rem(48px);
     font-weight: 500;
-    width: 100px;
-    line-height: 100px;
+    width: rem(100px);
+    line-height: rem(100px);
 }
 
 .recipes__desc {
@@ -66,20 +79,24 @@
 
 .recipes__desc.recipes__desc--active {
     display: inline-block;
-    max-width: 390px;
+    width: rem(390px);
     background-color: rgba(50, 50, 50, 0.9); 
-    padding: 46px 104px 10px 16px;
-    font-size: 16px;
-    line-height: 24px;
+    padding: rem(46px) rem(104px) rem(10px) rem(16px);
+    font-size: rem(16px);
+    line-height: rem(24px);
     font-weight: 400;
+
+    @include tablets {
+        width: 100%;
+    }
 }
 
 .recipes__cancel-btn {
     position: absolute;
-    padding: 0px;
-    width: 24px;
-    height: 24px;
-    border-radius: 14px;
+    padding: rem(0px);
+    width: rem(24px);
+    height: rem(24px);
+    border-radius: rem(14px);
     background-color: transparent;
     border: none;
     border-radius: none;

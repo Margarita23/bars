@@ -1,13 +1,15 @@
-@function rem($pxsize) {
-    @return ($pxsize/16)+rem;
+@function rem($px) {
+    @return $px / 16px + 0rem;
 }
 
-// @mixin remy ($pxsize) {
-//     font-size: ($pxsize/16)+rem;
-// }
+@mixin tablets {
+    @media screen and(max-width: 768px) {
+        @content;
+    }
+}
 
-// @media all and (min-width: 900px) {
-//     .my-example {
-//     width: 84%;
-//     }
-// }
+@mixin phones {
+    @media screen and(max-width: 480px) {
+        @content;
+    }
+}

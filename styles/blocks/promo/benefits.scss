@@ -1,6 +1,6 @@
 .benefits {
     display: inline-flex;
-    font-size: 16px;
+    font-size: rem(16px);
 
     &__content {
         display: inline-flex;
@@ -10,28 +10,28 @@
 }
 
 .benefits__item {
-    margin-right: 14px;
+    margin-right: rem(14px);
 
     & .icon {
-        margin-right: 10px;
+        margin-right: rem(10px);
     }
 }
 
 .benefits__item:last-child {
-    margin-right: 0px;
+    margin-right: rem(0px);
 }
 
 .benefits__content--nature .icon{
-    width: 44px;
-    height: 41px;
+    width: rem(44px);
+    height: rem(41px);
 }
 
 .benefits__content--delivery .icon{
-    width: 50px;
-    height: 40px;
+    width: rem(50px);
+    height: rem(40px);
 }
 
 .benefits__content--healthy .icon{
-    width: 42px;
-    height: 42px;
+    width: rem(42px);
+    height: rem(42px);
 }

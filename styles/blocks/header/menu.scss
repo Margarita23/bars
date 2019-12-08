@@ -2,11 +2,56 @@
     display: inline-flex;
     display: flex;
     justify-content: space-between;
+    
+    @include tablets {
+        display: none;
+    }
+}
+
+.menu-icon {
+    width: rem(25px);
+    height: rem(4px);
+    border-radius: 20%;
+    background-color: #fff;
+    position: relative;
+    display: none;
+
+    @include tablets {
+        display: block;
+    }
+}
+
+.menu-icon:before {
+    content: "";
+    display: none;
+    width: rem(25px);
+    height: rem(4px);
+    border-radius: 20%;
+    background-color: #fff;
+    margin-top: -7px;
+
+    @include tablets {
+        display: block;
+    }
+}
+
+.menu-icon:after {
+    content: "";
+    display: none;
+    width: rem(25px);
+    height: rem(4px);
+    border-radius: 20%;
+    background-color: #fff;
+    margin-top: 10px;
+
+    @include tablets {
+        display: block;
+    }
 }
 
 .menu {
     flex-grow: 1;
-    margin-right: 52px;
+    margin-right: rem(52px);
 }
 
 .menu__item {

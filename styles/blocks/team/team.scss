@@ -1,24 +1,30 @@
 .team {
-    background-color: rgb(212, 147, 201);
-}
-.team .container {
-    width: 1000px;
+    border-bottom: #000 solid 3px;
+    flex-direction: column;
 }
 
 .team__list {
     display: flex;
     justify-content: space-between;
+    width: 85%;
+    margin: 0 auto;
+    
+    @include tablets {
+        max-width: 670px;
+        flex-wrap: wrap;
+    }
 }
 
 .subject--team {
-    margin-bottom: 50px;
+    margin-bottom: rem(50px);
 }
 
 .avatar {
     display: block;
-    height: 288px;
+    height: rem(288px);
+    width: 100%;
     object-fit: cover;
-    margin-bottom: 23px;
+    margin-bottom: rem(23px);
 }
 
 .team__item {
@@ -27,7 +33,18 @@
     color: $black;
     text-align: center;
     flex: 1;
-    max-width: 220px;
+    margin-right: 20px;
+    width: 230px;
+
+    @include tablets {
+        padding-right: 10px;
+        padding-left: 10px;
+        min-width: 230px;
+    }
+}
+
+.team__item:last-child {
+    margin-right: 0px;
 }
 
 .info {
@@ -36,24 +53,25 @@
 
 .info--active {
     display: block;
+    padding-bottom: 20px;
 }
 
 .name {
-    font-size: 21px;
+    font-size: rem(21px);
     color: $dark-grey;
     font-weight: 500;
     position: relative;
-    margin-bottom: 10px;
+    margin-bottom: rem(10px);
 }
 
 .position {
-    font-size: 18px;
+    font-size: rem(18px);
     color: $light-black;
     font-weight: 400;
 }
 
 .desc {
-    font-size: 18px;
+    font-size: rem(18px);
     color: $grey;
     font-weight: 300;
     text-align: center;
@@ -62,9 +80,9 @@
 .name:after {
     content: "";
     display: inline-block;
-    margin-left: 10px;
-    border-top: 5px solid $dark-green;
-    border-right: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    border-left: 5px solid transparent;
+    margin-left: rem(10px);
+    border-top: rem(5px) solid $dark-green;
+    border-right: rem(5px) solid transparent;
+    border-bottom: rem(5px) solid transparent;
+    border-left: rem(5px) solid transparent;
 }
