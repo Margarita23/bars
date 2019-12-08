@@ -28,7 +28,6 @@
 
 .subject.subject--recipes {
     color: $white;
-    // margin-left: rem(161px);
     margin: 0 auto;
     padding-top: rem(86px);
 
@@ -36,10 +35,15 @@
         padding-left: rem(40px);
         padding-right: rem(20px);
     }
+
+    @include phones {
+        display: none;
+    }
 }
 
 .recipes__list {
     display: flex;
+    position: relative;
 }
 
 .recipes__item {
@@ -76,6 +80,8 @@
 
 .recipes__desc {
     display: none;
+    // width: 0;
+    // overflow: hidden;
 }
 
 .recipes__desc.recipes__desc--active {
@@ -89,6 +95,12 @@
 
     @include tablets {
         display: none;
+    }
+
+    @include phones {
+        display: inline-block;
+        // position: absolute;
+        // width: 100%;
     }
 }
 

@@ -11,8 +11,6 @@
         background-image: url(../assets/images/leaf-pattern.png);
         background-repeat: no-repeat;
         background-position: center;
-        // min-width: rem(191px);
-        // min-height: rem(314px);
     }
 
     &:after {
@@ -24,8 +22,6 @@
         background-image: url(../assets/images/razz.png);
         background-repeat: no-repeat;
         background-position: center;
-        // min-width: rem(161px);
-        // min-height: rem(315px);
     }
 
     & .container {
@@ -42,6 +38,7 @@
         width: rem(500px);
         margin: 0 auto;
     }
+
 }
 
 .reasons__desc {
@@ -51,7 +48,12 @@
     font-size: rem(18px);
 
     @include tablets {
-        margin-bottom: 26px;
+        margin-bottom: rem(26px);
+    }
+
+    @include phones {
+        text-align: left;
+        margin-left: rem(150px);
     }
 }
 
@@ -75,7 +77,6 @@
     text-align: center;
     font-size: rem(27px);
     color: $whole-black;
-    text-align: center;
     margin-bottom: rem(18px);
 
     &:before {
@@ -89,6 +90,19 @@
         width: rem(125px);
         height: rem(125px);
         margin-bottom: rem(28px);
+
+        @include phones {
+            position: absolute;
+            left: 0;
+        }
+
+    }
+
+    @include phones {
+        text-align: left;
+        width: 100%;
+        padding-left: rem(150px);
+        box-sizing: border-box;
     }
 }
 
@@ -136,4 +150,5 @@
     @include tablets {
         margin-right: 0;
     }
+    
 }

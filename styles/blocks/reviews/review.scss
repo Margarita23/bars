@@ -65,6 +65,13 @@
         margin-bottom: rem(40px);
     }
 
+    @include phones {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: rem(40px);
+    }
+
     &:before {
         content: "";
         width: rem(90px);
@@ -90,6 +97,11 @@
         width: rem(200px);
         height: rem(208px);
     }
+
+    @include phones {
+        width: rem(125px);
+        height: rem(125px);
+    }
 }
 
 .review__info {
@@ -112,6 +124,10 @@
         text-align: center;
         align-items: center;
         margin: 0px 20px;
+    }
+
+    @include phones {
+        margin: 0px 40px;
     }
 }
 

@@ -9,6 +9,11 @@
     justify-content: space-between;
     margin: rem(23px) rem(23px) rem(23px) rem(23px);
     align-items: center;
+
+    @include phones {
+        flex-direction: column;
+        text-align: center;
+    }
 }
  
 .adress {
@@ -22,6 +27,10 @@
     margin-left: rem(17px);
     font-size: rem(18px);
     font-weight: 100;
+
+    @include tablets {
+        display: inline-block;
+    }
 }
 
 .social-net__list {

@@ -11,6 +11,10 @@
   @include tablets {
     height: 1000px;
   }
+
+  @include phones {
+    height: 800px;
+  }
 }
 
 .container {
@@ -25,6 +29,8 @@
     flex-direction: column;
     width: rem(500px);
   }
+
+  
 }
 
 .subject {

@@ -8,9 +8,13 @@
     overflow: hidden;
 
     @include tablets {
-            background-image: url(../assets/images/promo_leaf.png);
-            background-position: 100% 0%;
-            background-size: 65% 65%;
+        background-image: url(../assets/images/promo_leaf.png);
+        background-position: 100% 0%;
+        background-size: 65% 65%;
+    }
+
+    @include phones {
+        background-size: 55% 55%;
     }
 
     &:after {
@@ -27,7 +31,7 @@
         z-index: 1;
 
         @include tablets {
-            background-image: none;
+            display: none;
         }
     }
 }

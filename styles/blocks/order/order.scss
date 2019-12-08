@@ -21,6 +21,10 @@
     @include tablets {
         flex-direction: column;
     }
+
+    @include phones {
+        width: 100%;
+    }
 }
 
 .form__column {
