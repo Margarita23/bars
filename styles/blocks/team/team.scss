@@ -1,6 +1,7 @@
 .team {
-    border-bottom: #000 solid 3px;
     flex-direction: column;
+    position: relative;
+    overflow: visible;
 }
 
 .team__list {
@@ -10,8 +11,9 @@
     margin: 0 auto;
     
     @include tablets {
-        max-width: 670px;
+        width: 100%;
         flex-wrap: wrap;
+        justify-content: center;
     }
 }
 
@@ -32,14 +34,13 @@
     flex-direction: column;
     color: $black;
     text-align: center;
-    flex: 1;
     margin-right: 20px;
-    width: 230px;
+    max-width: 230px;
 
     @include tablets {
-        padding-right: 10px;
-        padding-left: 10px;
-        min-width: 230px;
+        padding-right: 5px;
+        padding-left: 5px;
+        margin: 0px;
     }
 }
 

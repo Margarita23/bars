@@ -7,9 +7,6 @@
   min-height: rem(650px);
   display: flex;
   justify-content: center;
-  // overflow-x: hidden;
-  // overflow-x: visible;
-  // overflow-y: hidden;
 
   @include tablets {
     height: 1000px;

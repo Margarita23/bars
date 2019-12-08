@@ -5,9 +5,12 @@
     background-color: $blue;
     background-size: contain;
     position: relative;
+    overflow: hidden;
 
     @include tablets {
-        background-size: contain;
+            background-image: url(../assets/images/promo_leaf.png);
+            background-position: 100% 0%;
+            background-size: 65% 65%;
     }
 
     &:after {
@@ -27,7 +30,12 @@
             background-image: none;
         }
     }
-    
+}
+
+.promo .container {
+    @include tablets {
+        width: 100%;
+    }
 }
 
 .title {
@@ -75,7 +83,6 @@
     flex: 1;
 
     @include tablets {
-
         padding-top: rem(76px);
         display: flex;
         flex-direction: column;
@@ -101,11 +108,10 @@
             background-size: contain;
             background-repeat: no-repeat;
             transform: translateY(7%);
-            z-index: 1;
             bottom: 0;
+            z-index: 1;
         }
     }
-
 }
 
 .content__image .image {

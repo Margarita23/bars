@@ -28,7 +28,8 @@
 
 .subject.subject--recipes {
     color: $white;
-    padding-left: rem(161px);
+    // margin-left: rem(161px);
+    margin: 0 auto;
     padding-top: rem(86px);
 
     @include tablets {
@@ -39,7 +40,6 @@
 
 .recipes__list {
     display: flex;
-
 }
 
 .recipes__item {
@@ -69,8 +69,9 @@
     padding: rem(40px) rem(0px);
     font-size: rem(48px);
     font-weight: 500;
-    width: rem(100px);
+    max-width: rem(100px);
     line-height: rem(100px);
+    flex: 1;
 }
 
 .recipes__desc {
@@ -79,7 +80,7 @@
 
 .recipes__desc.recipes__desc--active {
     display: inline-block;
-    width: rem(390px);
+    max-width: rem(390px);
     background-color: rgba(50, 50, 50, 0.9); 
     padding: rem(46px) rem(104px) rem(10px) rem(16px);
     font-size: rem(16px);
@@ -87,7 +88,7 @@
     font-weight: 400;
 
     @include tablets {
-        width: 100%;
+        display: none;
     }
 }
 

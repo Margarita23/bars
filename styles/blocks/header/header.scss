@@ -12,6 +12,10 @@
     width: rem(53px);
     height: rem(38px);
     margin-right: rem(47px);
+
+    @include tablets {
+        margin-left: rem(47px);
+    }
 }
 
 .phone {

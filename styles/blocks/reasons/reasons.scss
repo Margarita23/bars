@@ -3,7 +3,6 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    border-bottom: #000 solid 3px;
 
     &:before {
         content: "";
@@ -25,7 +24,6 @@
         background-image: url(../assets/images/razz.png);
         background-repeat: no-repeat;
         background-position: center;
-        // background-size: contain;
         // min-width: rem(161px);
         // min-height: rem(315px);
     }
