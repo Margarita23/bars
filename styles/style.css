@@ -665,6 +665,9 @@ li {
     @media screen and (max-width: 320px) {
       .reasons .container {
         width: 320px; } }
+  @media screen and (max-width: 480px) {
+    .reasons {
+      padding-top: 0; } }
 
 .reasons__list {
   display: -webkit-box;
@@ -753,7 +756,7 @@ li {
       padding-left: 9.375rem;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
-      margin-bottom: 0; } }
+      margin-bottom: 15px; } }
 
 .reasons__item {
   display: -webkit-box;

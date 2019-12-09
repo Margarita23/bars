@@ -32,6 +32,10 @@
             width: 320px;
         }
     }
+
+    @include phones {
+        padding-top: 0;
+    }
 }
 
 .reasons__list {
@@ -126,7 +130,7 @@
         width: 95%;
         padding-left: rem(150px);
         box-sizing: border-box;
-        margin-bottom: 0;
+        margin-bottom: 15px;
     }
 }
 
