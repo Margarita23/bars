@@ -19,3 +19,9 @@
         @content;
     }
 }
+
+@mixin little-phones {
+    @media screen and(max-width: 320px) {
+        @content;
+    }
+}

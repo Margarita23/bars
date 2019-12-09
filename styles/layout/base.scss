@@ -14,6 +14,7 @@
 
   @include phones {
     height: 800px;
+    align-items: center;
   }
 }
 
@@ -30,7 +31,12 @@
     width: rem(500px);
   }
 
-  
+  @include phones {
+    flex-direction: column;
+    width: rem(480px);
+    width: 95%;
+    justify-content: flex-start;
+  }
 }
 
 .subject {
@@ -43,7 +49,12 @@
   @include tablets {
     font-size: rem(59px);
     font-weight: 600;
-}
+  }
+
+  @include little-phones {
+    font-size: rem(32px);
+    padding-top: 0;
+  }
 }
 
 .body {

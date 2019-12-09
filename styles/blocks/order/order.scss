@@ -3,6 +3,12 @@
     background-position: center;
     background-size: cover;
     position: relative;
+
+    & .container {
+        @include little-phones {
+            width: rem(320px);
+        }
+    }
 }
 
 .order h2 {
@@ -17,6 +23,7 @@
     display: flex;
     width: 95%;
     margin: 0 auto;
+    box-sizing: border-box;
     
     @include tablets {
         flex-direction: column;
@@ -24,6 +31,10 @@
 
     @include phones {
         width: 100%;
+    }
+
+    @include little-phones {
+        width: 95%;
     }
 }
 

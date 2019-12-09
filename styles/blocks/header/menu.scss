@@ -15,6 +15,7 @@
     background-color: #fff;
     position: relative;
     display: none;
+    z-index: 1;
 
     @include tablets {
         display: block;
