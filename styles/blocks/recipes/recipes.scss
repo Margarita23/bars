@@ -5,7 +5,8 @@
     background-position: center;
     background-size: cover;
     backdrop-filter: brightness(0%);
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: flex-start;
 
     &:before {
         width: rem(105px);
@@ -28,8 +29,9 @@
 
 .subject.subject--recipes {
     color: $white;
-    margin: 0 auto;
     padding-top: rem(86px);
+    padding-left: rem(160px);
+
 
     @include tablets {
         padding-left: rem(40px);
@@ -43,7 +45,15 @@
 
 .recipes__list {
     display: flex;
-    position: relative;
+    justify-content: flex-end;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 70%;
+
+    @include phones {
+        width: 100%;
+    }
 }
 
 .recipes__item {
@@ -52,6 +62,16 @@
     backdrop-filter: brightness(0%);
     background-position: center;
     background-size: cover;
+
+    @include phones {
+        &.recipes__item--active {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            z-index: 2;
+        }
+    }
 }
 
 .recipes__item:first-child {
@@ -76,31 +96,37 @@
     max-width: rem(100px);
     line-height: rem(100px);
     flex: 1;
-}
-
-.recipes__desc {
-    display: none;
-    // width: 0;
-    // overflow: hidden;
-}
-
-.recipes__desc.recipes__desc--active {
-    display: inline-block;
-    max-width: rem(390px);
-    background-color: rgba(50, 50, 50, 0.9); 
-    padding: rem(46px) rem(104px) rem(10px) rem(16px);
-    font-size: rem(16px);
-    line-height: rem(24px);
-    font-weight: 400;
-
-    @include tablets {
-        display: none;
-    }
 
     @include phones {
-        display: inline-block;
-        // position: absolute;
-        // width: 100%;
+        display: none;
+    }
+}
+
+.recipes__item--active .recipes__title {
+    display: block;
+}
+
+
+
+.recipes__desc {
+    width: 0;
+    overflow: hidden;
+}
+
+.recipes__item--active .recipes__desc{
+    width: 100%;
+    background-color: rgba(50, 50, 50, 0.9); 
+    padding: rem(46px) rem(64px) rem(10px) rem(16px);
+    font-size: rem(16px);
+    line-height: rem(24px);
+    font-weight: 300;
+
+    @include phones {
+        position: absolute;
+        width: 80%;
+        height: 100%;
+        right: 0px;
+        box-sizing: border-box;
     }
 }
 
@@ -119,4 +145,5 @@
     top: 0;
     right: 0;
     transform: translate(-100%, 100%);
+    cursor: pointer;
 }
