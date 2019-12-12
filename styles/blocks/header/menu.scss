@@ -1,10 +1,52 @@
 .menu__list {
-    display: inline-flex;
     display: flex;
     justify-content: space-between;
+    z-index: 2;
     
     @include tablets {
         display: none;
+    }
+}
+
+.menu-icon__container {
+    width: rem(28px);
+    height: rem(28px);
+    position: relative;
+    display: none;
+    z-index: 1;
+
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        margin-right: rem(47px);
+    }
+
+    & .menu__cansel {
+        // display: none;
+        display: block;
+        width: 25px;
+        border: 4px solid $grey;
+        border-radius: 5px;
+        transform: rotate(45deg);
+
+        &:before {
+            content: "";
+            // display: none;
+            display: block;
+            width: 25px;
+            position: absolute;
+            border: 4px solid $grey;
+            border-radius: 5px;
+            transform: rotate(90deg) translate(-3px, 3px);
+        }
+    }
+
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 1%;
+        right: 1%;
     }
 }
 
@@ -21,33 +63,33 @@
         display: block;
         margin-right: rem(47px);
     }
-}
 
-.menu-icon:before {
-    content: "";
-    display: none;
-    width: rem(25px);
-    height: rem(4px);
-    border-radius: 20%;
-    background-color: #fff;
-    margin-top: -7px;
-
-    @include tablets {
-        display: block;
+    &:before {
+        content: "";
+        display: none;
+        width: rem(25px);
+        height: rem(4px);
+        border-radius: 20%;
+        background-color: #fff;
+        margin-top: -7px;
+    
+        @include tablets {
+            display: block;
+        }
     }
-}
 
-.menu-icon:after {
-    content: "";
-    display: none;
-    width: rem(25px);
-    height: rem(4px);
-    border-radius: 20%;
-    background-color: #fff;
-    margin-top: 10px;
-
-    @include tablets {
-        display: block;
+    &:after {
+        content: "";
+        display: none;
+        width: rem(25px);
+        height: rem(5px);
+        border-radius: 20%;
+        background-color: #fff;
+        margin-top: 10px;
+    
+        @include tablets {
+            display: block;
+        }
     }
 }
 
