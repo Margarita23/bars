@@ -1,35 +1,37 @@
 .bars {
-    padding: rem(63px) rem(50px) rem(0px) rem(50px);
+    padding: rem(0px) rem(50px) rem(0px) rem(50px);
     color: black;
     background-color: $light-grey-first;
+    align-items: center;
+
+    @include tablets {
+        padding: 0px;
+    }
 }
 
 .bars .container{
-    flex-direction: row;
+    position: relative;
+    flex: 1;
+
+    align-items: center;
 }
 
 .arrow-left {
-    width: rem(20px);
+    width: rem(35px);
     height: rem(35px);
     background-image: url(/assets/images/arrow-left.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
-    position: absolute;
-    left: -3%;
-    top: 38%;
 }
 
 .arrow-right {
-    width: rem(20px);
+    width: rem(35px);
     height: rem(35px);
     background-image: url(/assets/images/arrow-right.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
-    position: absolute;
-    right: -3%;
-    top: 38%;
 }
 
 .bars__list {
@@ -40,6 +42,12 @@
 
 .bars__item {
     display: none;
+    position: relative;
+    
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .bars__item:first-child {
@@ -47,12 +55,13 @@
 }
 
 .bar__preview {
-    padding-top: 40px;
-    padding-right: 87px;
-    padding-left: 23px;
+    padding-top: 2%;
+    padding-right: 10%;
+    padding-left: 7%;
     position: relative;
-    width: 560px;
     box-sizing: border-box;
+    width: 55%;
+    flex: 1;
 
     &:before {
         content: "";
@@ -62,8 +71,8 @@
         background-size: contain;
         background-position: center;
         position: absolute;
-        width: 75px;
-        height: 92px;
+        width: rem(75px);
+        height: rem(92px);
         left: -7%;
         top: 22%;
 
@@ -77,8 +86,8 @@
         background-size: contain;
         background-position: center;
         position: absolute;
-        width: 99px;
-        height: 73px;
+        width: rem(99px);
+        height: rem(73px);
         right: 13%;
         bottom: 28%;
     }
@@ -86,24 +95,31 @@
 
 .bar__image {
     object-fit: contain;
+    width: 100%;
+    height: 100%;
 }
 
 .bar__info {
-    width: rem(365px);
-    height: rem(500px);
+    flex: 1;
+    width: 40%;
+
+    @include tablets {
+        width: 100%;
+        
+    }
 }
 
 .bar__consist-icon {
     background-color: $blue;
     border-radius: 4px;
-    width: 90px;
-    height: 90px;
+    width: rem(90px);
+    height: rem(90px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
     margin-bottom: rem(32px);
-    margin-left: 4px;
+    margin-left: rem(4px);
     cursor: pointer;
     position: relative;
 
@@ -113,6 +129,12 @@
         & .composition__list {
             display: block;
         }
+    }
+
+    @include tablets {
+        position: absolute;
+        top: 0;
+        right: 0;
     }
 }
 
@@ -126,39 +148,44 @@
     color: #fff;
     padding-bottom: rem(5px);
     font-weight: 700;
-    font-size: 18px;
+    font-size: rem(18px);
 }
 
 
 .composition__list {
-    width: 218px;
+    width: rem(218px);
     position: absolute;
     background-color: rgba($white, $alpha: .9);
     left: 100%;
     top: 0;
-    padding: 30px 20px 30px 30px;
+    padding: rem(30px) rem(20px) rem(30px) rem(30px);
     display: none;
+
+    @include tablets {
+        left: -200%;
+        margin-left: rem(4px);
+    }
 }
 
 .composition__item {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 15px;
-    font-size: 16px;
-    line-height: 24px;
+    margin-bottom: rem(15px);
+    font-size: rem(16px);
+    line-height: rem(24px);
     color: #343333;
     font-weight: 400;
 }
 
 .composition__icon-container {
-    width: 35px;
-    height: 35px;
-    margin-right: 23px;
+    width: rem(35px);
+    height: rem(35px);
+    margin-right: rem(23px);
 }
 
 .composition__icon {
-    width: 35px;
-    height: 35px;
+    width: rem(35px);
+    height: rem(35px);
 }
 
 .composition__text {
@@ -166,28 +193,43 @@
     flex: 1;
 }
 
-.composition__weight {
-}
-
 .bar__name {
-    font-size: 36px;
+    font-size: rem(36px);
     color: #0d0d0d;
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: rem(15px);
+
+    @include tablets {
+        text-align: center;
+        width: rem(375px);
+        margin: 0 auto rem(15px);
+    }
 }
 
 .desc__content {
-    font-size: 18px;
-    line-height: 21px;
+    font-size: rem(18px);
+    line-height: rem(21px);
     color: #666666;
     font-weight: 400;
     margin-bottom: rem(40px);
+    margin-right: 16%;
+
+    @include tablets {
+        text-align: center;
+
+        width: rem(580px);
+        margin: 0 auto rem(40px);
+    }
 }
 
 .desc__props {
     display: flex;
     margin-bottom: rem(32px);
+
+    @include tablets {
+        justify-content: center;
+    }
 }
 
 .cal {
@@ -195,42 +237,46 @@
 }
 
 .props__title {
-    font-size: 18px;
+    font-size: rem(18px);
     color: #333333;
     font-family: $font-stack;
     font-weight: 400;
-    padding-bottom: 3px;
+    padding-bottom: rem(3px);
 }
 
 .props__text {
-    font-size: 18px;
+    font-size: rem(18px);
     color: #333333;
     font-weight: 700;
 }
 
 .desc__order-block {
     display: flex;
+
+    @include tablets {
+        justify-content: center;
+    }
 }
 
 .price {
     display: flex;
-    font-size: 60px;
-    line-height: 60px;
+    font-size: rem(60px);
+    line-height: rem(60px);
     color: #0d0d0d;
     font-weight: 300;
-    margin-right: 30px;
+    margin-right: rem(30px);
 }
 
 .price__quantity {
-    padding-right: 13px;
+    padding-right: rem(13px);
 }
 
 .order-button {
     color: #fff;
     background-color: rgb(11, 77, 60);
-    border-radius: 50px;
+    border-radius: rem(50px);
     padding: rem(17px) rem(33px) rem(14px) rem(37px);
-    font-size: 19px;
+    font-size: rem(19px);
     font-weight: 800;
     text-transform: uppercase;
 }

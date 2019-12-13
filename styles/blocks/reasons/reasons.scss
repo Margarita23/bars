@@ -17,8 +17,10 @@
     &:after {
         content: "";
         position: absolute;
+        width: 161px;
+        height: 315px;
         left: 0;
-        bottom: 0;
+        bottom: 4%;
         transform: translate(0, 50%);
         background-image: url(../assets/images/razz.png);
         background-repeat: no-repeat;
@@ -44,14 +46,7 @@
     
     @include tablets {
         flex-direction: column;
-        width: rem(500px);
-        margin: 0 auto;
     }
-
-    @include little-phones {
-        width: rem(400px);
-    }
-
 }
 
 .reasons__desc {

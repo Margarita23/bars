@@ -231,7 +231,7 @@
 }
 
 .form__button {
-    padding: rem(18px) rem(31px);
+    padding: rem(18px) rem(31px) rem(16px) rem(31px);
     font-size: rem(19px);
     color: rgb(255, 255, 255);
     font-weight: 800;
@@ -239,7 +239,7 @@
     background-color: $dark-green;
     border-radius: rem(30px);
     letter-spacing: rem(1px);
-    border: none;
+    border-bottom: rem(2px) solid transparent;
     cursor: pointer;
 }
 
