@@ -10,6 +10,7 @@ let menuCancelContainer = document.querySelector('.menu-icon__cancel-container')
 let flagMenuExist = true;
 
 menuContainer.addEventListener("click", function(event){
+    event.preventDefault();
     showMenu(event);
 });
 
@@ -18,13 +19,12 @@ function showMenu(event) {
         flagMenuExist = false;
         menuOpen.style.display = "none";
         menuCancelContainer.style.display = "block";
-
         menuList.classList.add("menu__list--dark");
-
     } else {
         flagMenuExist = true;
         menuOpen.style.display = "block";
         menuCancelContainer.style.display = "none";
+        menuList.classList.remove("menu__list--dark");
     }
 }
 

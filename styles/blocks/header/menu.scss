@@ -19,10 +19,10 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        font-size: 36px;
-        line-height: 72px;
+        font-size: rem(36px);
+        line-height: rem(72px);
         font-weight: 400;
-        background-color: #2f3234;
+        background-color: rgba(47, 50, 52, 0.9);
     }
 }
 
@@ -114,4 +114,9 @@
 
 .menu__item {
     cursor: pointer;
+}
+
+.menu__link {
+    color: #fff;
+    text-decoration-line: none;
 }

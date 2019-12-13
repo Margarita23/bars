@@ -14,6 +14,7 @@
 
     @include phones {
         background-size: 55% 55%;
+        align-items: flex-start;
     }  
 
     &:after {
@@ -40,6 +41,10 @@
 
     @include tablets {
         width: 100%;
+    }
+
+    @include phones {
+        height: 100%;
     }
 
     @include little-phones {

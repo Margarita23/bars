@@ -1,5 +1,4 @@
 .bars {
-    padding: rem(0px) rem(50px) rem(0px) rem(50px);
     color: black;
     background-color: $light-grey-first;
     align-items: center;
@@ -11,9 +10,11 @@
 
 .bars .container{
     position: relative;
-    flex: 1;
-
     align-items: center;
+
+    @include tablets {
+        width: 65%;
+    }
 }
 
 .arrow-left {
@@ -43,6 +44,7 @@
 .bars__item {
     display: none;
     position: relative;
+    z-index: 2;
     
     @include tablets {
         flex-direction: column;
@@ -56,10 +58,9 @@
 
 .bar__preview {
     padding-top: 2%;
-    padding-right: 10%;
-    padding-left: 7%;
+    margin-right: 8%;
+    margin-left: 3%;
     position: relative;
-    box-sizing: border-box;
     width: 55%;
     flex: 1;
 
@@ -75,7 +76,6 @@
         height: rem(92px);
         left: -7%;
         top: 22%;
-
     }
 
     &:after {
@@ -91,6 +91,12 @@
         right: 13%;
         bottom: 28%;
     }
+
+    @include tablets {
+        padding-top: 0;
+        margin-right: 0;
+        margin-left: 0;
+    }
 }
 
 .bar__image {
@@ -105,21 +111,19 @@
 
     @include tablets {
         width: 100%;
-        
     }
 }
 
 .bar__consist-icon {
     background-color: $blue;
     border-radius: 4px;
-    width: rem(90px);
+    width: 22%;
     height: rem(90px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
     margin-bottom: rem(32px);
-    margin-left: rem(4px);
     cursor: pointer;
     position: relative;
 
@@ -132,9 +136,14 @@
     }
 
     @include tablets {
+        width: rem(90px);
         position: absolute;
         top: 0;
         right: 0;
+    }
+
+    @include phones {
+        top: -10%;
     }
 }
 
@@ -162,8 +171,8 @@
     display: none;
 
     @include tablets {
-        left: -200%;
-        margin-left: rem(4px);
+        left: -300%;
+        padding: rem(30px) rem(20px) rem(30px) rem(30px);
     }
 }
 
@@ -217,8 +226,7 @@
 
     @include tablets {
         text-align: center;
-
-        width: rem(580px);
+        // width: rem(580px);
         margin: 0 auto rem(40px);
     }
 }

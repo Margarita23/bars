@@ -13,6 +13,10 @@
         background-image: url(../assets/images/big-grey-leaf.png);
         background-repeat: no-repeat;
         background-position: center;
+
+        @include tablets {
+            top: -25%;
+        }
     }
 
     &:after {
@@ -25,6 +29,10 @@
         background-image: url(../assets/images/blue-berry.png);
         background-repeat: no-repeat;
         background-position: center;
+
+        @include tablets {
+            top: -4%;
+        }
     }
 }
 
@@ -33,6 +41,8 @@
     justify-content: center;
     width: 85%;
     margin: 0 auto;
+    position: relative;
+    z-index: 2;
     
     @include tablets {
         width: 90%;
@@ -47,6 +57,8 @@
 
 .subject--team {
     margin-bottom: rem(50px);
+    position: relative;
+    z-index: 2;
 }
 
 .avatar {

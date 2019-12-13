@@ -7,6 +7,9 @@
     top: 0;
     width: 100%;
 
+    @include tablets {
+        padding-top: 0;
+    }
 }
 
 .logo {
