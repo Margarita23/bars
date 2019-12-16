@@ -451,31 +451,39 @@
           <h2 class="subject subject--team">команда</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img src="./assets/images/team/photo-1.png" alt="Аватарка" class="avatar">
-              <div class="name">Борис Федорович</div>
-              <div class="info info--active">
-                <div class="position">Повар</div>
-                <div class="desc">Готовлю крутые батончики</div>
+              <div class="avatar__container">
+                <img src="./assets/images/team/photo-1.png" alt="Аватарка" class="avatar">
               </div>
-            </li>
-            <li class="team__item">
-              <img src="./assets/images/team/photo-2.png" alt="Аватарка" class="avatar">
-              <div class="name">Алла Иванова</div>
+              <div class="name">Борис Федорович</div>
               <div class="info">
                 <div class="position">Повар</div>
                 <div class="desc">Готовлю крутые батончики</div>
               </div>
             </li>
             <li class="team__item">
-              <img src="./assets/images/team/photo-4.png" alt="Аватарка" class="avatar">
+              <div class="avatar__container">
+                <img src="./assets/images/team/photo-2.png" alt="Аватарка" class="avatar">
+              </div>
+              <div class="name">Алла Иванова</div>
+              <div class="info">
+                <div class="position">Повар</div>
+                <div class="desc">Готовлю крутые батончики</div>
+              </div>
+            </li>
+            <li class="team__item team__item--active">
+                <div class="avatar__container">
+                  <img src="./assets/images/team/photo-4.png" alt="Аватарка" class="avatar">
+                </div>
               <div class="name">Кирилл Матросов</div>
-              <div class="info info--active">
+              <div class="info">
                 <div class="position">Оператор</div>
                 <div class="desc">С радостью поможет подобрать батончики и оформить заказ.</div>
               </div>
             </li>
             <li class="team__item">
-              <img src="./assets/images/team/photo-3.png" alt="Аватарка" class="avatar">
+              <div class="avatar__container">
+                <img src="./assets/images/team/photo-3.png" alt="Аватарка" class="avatar">
+              </div>
               <div class="name">Мила Рыжкова</div>
               <div class="info">
                 <div class="position">Оператор</div>
@@ -487,7 +495,7 @@
       <section class="section recipes">
             <h2 class="subject subject--recipes">Меню</h2>
             <ul class="recipes__list">
-              <li class="recipes__item recipes__item--active">
+              <li class="recipes__item">
                 <h3 class="recipes__title">Батончики с молоком</h3>
                 <div class="recipes__desc">
                   <button class="recipes__cancel-btn"></button>
@@ -498,7 +506,7 @@
                   Надо бы, кстати, бабулю поздравить с днём Победы.
                 </div>
               </li>
-              <li class="recipes__item">
+              <li class="recipes__item recipes__item--active">
                 <h3 class="recipes__title">С мёдом и фруктами</h3>
                 <div class="recipes__desc">
                   <button class="recipes__cancel-btn"></button>
@@ -552,43 +560,43 @@
     <section class="section order">
       <div class="container">
         <h2 class="subject subject--order">закажите доставку</h2>
-        <form class="order__form">
+        <form class="order__form" id="formOrder">
           <div class="form__column">
             <div class="form__row">
               <label class="form__block">
                 <div class="form__block-title">Имя</div>
-                <input type="text" class="form__input">
+                <input type="text" class="form__input" name="name">
               </label>
               <label class="form__block">
                 <div class="form__block-title">Телефон</div>
-                <input type="text" class="form__input" value="89022348912">
+                <input type="text" class="form__input" value="89022348912" name="phone">
               </label>
             </div>
               <div class="form__row">
                 <label class="form__block">
                   <div class="form__block-title">Улица</div>
-                  <input type="text" class="form__input">
+                  <input type="text" class="form__input" name="street">
                 </label>
               </div>
               <div class="form__row">
                 <label class="form__block">
                   <div class="form__block-title">Дом</div>
-                  <input type="text" class="form__input">
+                  <input type="text" class="form__input" name="homeNumber">
                 </label>
         
                 <label class="form__block">
                   <div class="form__block-title">Корпус</div>
-                  <input type="text" class="form__input">
+                  <input type="text" class="form__input" name="housing">
                 </label>
         
                 <label class="form__block">
                   <div class="form__block-title">Квартира</div>
-                  <input type="text" class="form__input">
+                  <input type="text" class="form__input" name="flatNumber">
                 </label>
                    
                 <label class="form__block">
                   <div class="form__block-title">Этаж</div>
-                  <input type="text" class="form__input">
+                  <input type="text" class="form__input" name="floorNumber">
                 </label>
               </div>
           </div>
@@ -596,7 +604,7 @@
             <div class="form__row">
               <label class="form__block">
                 <div class="form__block-title">Комментарий</div>
-                <input type="text" class="form__input--textarea">
+                <input type="text" class="form__input--textarea" name="comment">
               </label>
             </div>
             <div class="form__row">

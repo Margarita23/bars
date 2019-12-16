@@ -1417,7 +1417,7 @@ li {
   z-index: 2; }
 
 .avatar {
-  display: block;
+  overflow: hidden;
   height: 18rem;
   width: 100%;
   -o-object-fit: cover;
@@ -1435,10 +1435,12 @@ li {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-line-pack: center;
+  align-content: center;
   color: #010101;
   text-align: center;
   margin-right: 20px;
-  max-width: 230px; }
+  max-width: 225px; }
   @media screen and (max-width: 768px) {
     .team__item {
       padding-right: 5px;
@@ -1454,7 +1456,7 @@ li {
 .info {
   display: none; }
 
-.info--active {
+.team__item--active .info {
   display: block;
   padding-bottom: 20px; }
 
@@ -1483,7 +1485,22 @@ li {
   border-top: 0.3125rem solid #0f5a47;
   border-right: 0.3125rem solid transparent;
   border-bottom: 0.3125rem solid transparent;
-  border-left: 0.3125rem solid transparent; }
+  border-left: 0.3125rem solid transparent;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+.team__item--active .name:after {
+  border-top: 0.3125rem solid transparent;
+  border-right: 0.3125rem solid transparent;
+  border-bottom: 0.3125rem solid #0f5a47;
+  border-left: 0.3125rem solid transparent;
+  top: 25%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
 
 .recipes {
   position: relative;
@@ -1535,6 +1552,10 @@ li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  justify-self: flex-end;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   height: 100%;
   width: 70%; }
   @media screen and (max-width: 480px) {

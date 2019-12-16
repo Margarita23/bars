@@ -62,7 +62,7 @@
 }
 
 .avatar {
-    display: block;
+    overflow: hidden;
     height: rem(288px);
     width: 100%;
     object-fit: cover;
@@ -76,10 +76,13 @@
 .team__item {
     display: flex;
     flex-direction: column;
+    align-content: center;
     color: $black;
     text-align: center;
     margin-right: 20px;
-    max-width: 230px;
+    max-width: 225px;
+    // min-height: 500px;
+
 
     @include tablets {
         padding-right: 5px;
@@ -100,7 +103,7 @@
     display: none;
 }
 
-.info--active {
+.team__item--active .info {
     display: block;
     padding-bottom: 20px;
 }
@@ -124,6 +127,7 @@
     color: $grey;
     font-weight: 300;
     text-align: center;
+    
 }
 
 .name:after {
@@ -134,4 +138,16 @@
     border-right: rem(5px) solid transparent;
     border-bottom: rem(5px) solid transparent;
     border-left: rem(5px) solid transparent;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.team__item--active .name:after {
+    border-top: rem(5px) solid transparent;
+    border-right: rem(5px) solid transparent;
+    border-bottom: rem(5px) solid $dark-green;
+    border-left: rem(5px) solid transparent;
+    top: 25%;
+    transform: translateY(-50%);
 }
