@@ -55,6 +55,7 @@
     margin: rem(30px) auto rem(23px);
     position: relative;
 
+
     @include tablets {
         width: rem(460px);
         flex-direction: column;
