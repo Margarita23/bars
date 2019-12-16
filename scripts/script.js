@@ -114,6 +114,36 @@ function removeRecipeDesc(desc){
     desc.style.display = 'none';
 }
 
+//---------------------
+//review switcher
+let reviewsList = document.querySelector('.reviews__list');
+let reviewShowList = document.querySelector('.review-show__list');
+
+reviewsList.addEventListener('click', function(event){
+    if(event.target.className === 'previews' && event.target.className != 'previews--active'){
+        let indexOfNewActiveItem = getIdFromArray(reviewsList.querySelectorAll(".reviews__item"), event.target.parentElement);
+        let indexOfOldActiveItem = getIdFromArray(reviewsList.querySelectorAll(".previews"), reviewsList.querySelector(".previews.previews--active"));
+        reviewsList.querySelectorAll(".previews")[indexOfOldActiveItem].classList.remove("previews--active");
+        reviewsList.querySelectorAll(".previews")[indexOfNewActiveItem].classList.add("previews--active");
+        reviewShowList.children[indexOfOldActiveItem].classList.remove('review-show__item--active');
+        reviewShowList.children[indexOfNewActiveItem].classList.add('review-show__item--active');
+        // console.log(reviewsList.querySelectorAll(".previews"));
+        // console.log(reviewsList.querySelectorAll(".previews"));
+    }
+});
+
+function getIdFromArray(array, element){
+    let res = null;
+    array.forEach(function(value, index){
+        if(value == element){
+            res = index;
+        }
+    });
+    return res;
+}
+
+
+
 // --------------------
 // form processing
 const orderForm = document.getElementById("formOrder");
