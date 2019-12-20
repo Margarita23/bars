@@ -127,8 +127,6 @@ reviewsList.addEventListener('click', function(event){
         reviewsList.querySelectorAll(".previews")[indexOfNewActiveItem].classList.add("previews--active");
         reviewShowList.children[indexOfOldActiveItem].classList.remove('review-show__item--active');
         reviewShowList.children[indexOfNewActiveItem].classList.add('review-show__item--active');
-        // console.log(reviewsList.querySelectorAll(".previews"));
-        // console.log(reviewsList.querySelectorAll(".previews"));
     }
 });
 
@@ -141,8 +139,6 @@ function getIdFromArray(array, element){
     });
     return res;
 }
-
-
 
 // --------------------
 // form processing
