@@ -66,9 +66,9 @@
         text-align: center;
     }
 
-    @include little-phones {
+    @include phones {
         font-size: rem(32px);
-        line-height: rem(34px);
+        line-height: rem(32px);
     }
 }
 

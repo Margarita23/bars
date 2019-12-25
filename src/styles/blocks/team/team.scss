@@ -39,7 +39,7 @@
 .team__list {
     display: flex;
     justify-content: center;
-    width: 85%;
+    // width: 85%;
     margin: 0 auto;
     position: relative;
     z-index: 2;
@@ -59,6 +59,10 @@
     margin-bottom: rem(50px);
     position: relative;
     z-index: 2;
+
+    @include phones {
+        margin-bottom: rem(5px);
+    }
 }
 
 .avatar {
@@ -69,7 +73,7 @@
     margin-bottom: rem(23px);
 
     @include phones {
-        max-height: rem(250px);
+        max-height: rem(200px);
     }
 }
 

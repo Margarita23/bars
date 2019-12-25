@@ -43,6 +43,10 @@
     }
 }
 
+.none-active {
+    display: none;
+}
+
 .recipes__list {
     display: flex;
     justify-self: flex-end;
@@ -86,8 +90,7 @@
     padding: rem(40px) rem(0px);
     font-size: rem(48px);
     font-weight: 500;
-    max-width: 100px;
-    line-height: rem(100px);
+    line-height: 100px;
     backdrop-filter: brightness(0%);
     background-position: center;
     background-size: cover;
@@ -102,6 +105,12 @@
 }
 
 .recipes__desc {
+    display: none;
+}
+
+.recipes__desc.close-desc {
+    width: 0px;
+    overflow: hidden;
     display: none;
 }
 
