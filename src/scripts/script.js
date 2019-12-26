@@ -1,14 +1,16 @@
 
 (function(){
 
-    ymaps.ready(init);
-
-    function init() {
-        let map = new ymaps.Map('map', {
-            center: [59.94, 30.32],
-            zoom: 12
-        });
+    function initMap() {
+        var coordinates = {lat: 47.212325, lng: 38.933663},
+        
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: coordinates,
+                zoom: 12
+            });
     }
+
+    initMap();
 
     const arrowLeft = document.querySelector('.arrow-left');
     const arrowRight = document.querySelector('.arrow-right');
